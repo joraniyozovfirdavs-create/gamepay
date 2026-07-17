@@ -1,0 +1,287 @@
+/* Header search panel styles (nested SCSS) */
+#header {
+    background-color: black;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid gray;
+    z-index: 999;
+
+    .container {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        overflow: visible;
+
+        nav {
+
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                a {
+                    display: inline-block;
+                    padding: 10px 12px;
+                    border-bottom: 1px solid black;
+                    font-size: 22px;
+                    letter-spacing: 0;
+                    font-weight: 600;
+                    color: #ffffff;
+                    transition: 0.1s ease;
+
+                    &:hover,
+                    &:focus-visible,
+                    &.active {
+                        color: orange;
+                        outline: none;
+                        border-color: orange;
+                    }
+
+                    // &:hover::before,
+                    // &:focus-visible::before,
+                    // &.active::before {
+                    //     content: "";
+                    //     position: absolute;
+                    //     top: 60%;
+                    //     transform: translateX(-5px);
+                    //     width: 60px;
+                    //     height: 2px;
+                    //     background: orange;
+                    // }
+                }
+            }
+        }
+
+        .header_search {
+            .search_form {
+                display: flex;
+                align-items: center;
+
+                // Input va takliflar qutisini to'g'rilab turuvchi wrapper
+                .search-input-wrapper {
+                    position: relative;
+                    width: 220px; // Eski kodingizdagi input kengligi wrapperga berildi
+
+                    input {
+                        width: 100%; // Wrapper kengligini to'liq egallaydi
+                        padding: 14px 18px;
+                        border: 1px solid #ddd;
+                        border-right: none;
+                        border-radius: 6px 0 0 6px;
+                        outline: none;
+                        font-size: 20px;
+                        letter-spacing: 0;
+                        font-weight: 500;
+                        cursor: pointer;
+                        transition: 0.3s ease;
+
+                        &:focus::placeholder {
+                            border-color: orange;
+                            color: orange;
+                        }
+
+                        &:hover::placeholder {
+                            color: orange;
+                        }
+                    }
+                }
+
+                // Pastdan chiquvchi takliflar oynasi
+                .suggestions-box {
+                    position: absolute;
+                    top: 100%; // Inputning roppa-rosa tagidan joy oladi
+                    left: 0;
+                    right: 0;
+                    background: #fff;
+                    border: 1px solid #ddd;
+                    border-top: none;
+                    max-height: 250px;
+                    overflow-y: auto;
+                    z-index: 999;
+                    display: none; // Boshida ko'rinmaydi
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                    border-radius: 0 0 6px 6px;
+
+                    // Ro'yxatdagi har bir o'yin elementi
+                    .suggestion-item {
+                        padding: 12px 18px;
+                        font-size: 16px;
+                        color: #333;
+                        cursor: pointer;
+                        transition: background 0.2s ease;
+                        text-align: left;
+
+                        &:hover {
+                            background-color: #f7f7f7;
+                            color: orange; // Sichqoncha borganda matn to'q sariq bo'ladi
+                        }
+                    }
+                }
+
+                .search_btn {
+                    padding: 14px 18px;
+                    border: 1px solid #ddd;
+                    background: orange;
+                    color: #fff;
+                    border-radius: 0 6px 6px 0;
+                    font-size: 20px;
+                    letter-spacing: 0;
+                    font-weight: 500;
+                    transition: 0.3s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: darkorange;
+                    }
+                }
+            }
+        }
+
+        .header_actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 15.5px 24px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 20px;
+                transition: all 0.15s ease;
+                border: 1px solid transparent;
+                text-align: center;
+            }
+
+            .login_btn {
+                padding: 12px 22px;
+                background: #fff;
+                color: #222;
+                border-color: #e6e6e6;
+                text-align: center;
+                border: 2px solid #fff;
+                transition: 0.3s ease;
+
+                &:hover {
+                    color: orange;
+                    border-color: orange;
+                }
+            }
+
+            .cart_btn {
+                background: #ff6f00;
+                color: #fff;
+                border-color: #ff6f00;
+                position: relative;
+                padding: 14px 20px;
+                border-radius: 12px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                min-width: 60px;
+
+                img {
+                    width: 22px;
+                    height: 22px;
+                    display: block;
+                    filter: invert(1) brightness(1.4);
+                }
+            }
+
+            .language_select {
+                position: fixed;
+                right: 1%;
+                top: 20%;
+
+                width: 80px;
+                height: 80px;
+                display: inline-flex;
+                align-items: center;
+                background: #404040;
+                border: 1px solid #333;
+                border-radius: 50%;
+                overflow: hidden;
+
+
+                select {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    background: transparent;
+                    border: none;
+                    color: #fff;
+                    padding: 12px 38px 12px 16px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    outline: none;
+                    min-width: 90px;
+
+                    option {
+                        background-color: #404040;
+                        border-radius: 10px;
+                        margin-top: 4px;
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
+
+                &::after {
+                    content: "▾";
+                    position: absolute;
+                    right: 12px;
+                    color: #fff;
+                    pointer-events: none;
+                    font-size: 14px;
+                }
+            }
+
+            .cart_count {
+                display: inline-block;
+                min-width: 20px;
+                height: 20px;
+                line-height: 20px;
+                background: #fff;
+                color: #ff6f00;
+                border-radius: 999px;
+                text-align: center;
+                padding: 0 6px;
+                margin-left: 6px;
+                font-weight: 700;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    @media (max-width: 900px) {
+        .container {
+            nav {
+                display: none;
+            }
+
+            .header_search {
+                input[type="search"] {
+                    min-width: 100px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,343 @@
+// Ranglar va o'zgaruvchilar (Siz aytgan ranglar asosida)
+$bg-black: #050505; // Mutloq qora fon
+$card-bg: #121212; // Bloklar uchun to'q kulrang/qora
+$input-bg: #1e1e1e; // Inputlar ichki foni
+$orange-main: orange; // To'q sariq (Orange)
+$orange-neon: #ff5722; // Yorqin olovrang (#ff5722)
+$text-white: #ffffff; // Oq matnlar
+$text-muted: #a0a0a0; // Pasaytirilgan kulrang matn
+$error-color: #ff3333; // Xatolik rangi
+
+body {
+    background-color: black;
+}
+
+.login_page_wrapper {
+    background-color: $bg-black;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login_container {
+    background-color: $card-bg;
+    max-width: 420px;
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 16px;
+    // Orqa fondagi olovrang neon nurlanish effekti (Glow)
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 87, 34, 0.15);
+    border: 1px solid rgba($orange-neon, 0.2);
+    text-align: center;
+
+    .login_logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 8px;
+
+        img {
+            height: 42px;
+            width: auto;
+        }
+
+        h1 {
+            color: $text-white;
+            font-size: 30px;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: 1px;
+
+            span {
+                // // Gradient rang: Orange dan #ff5722 ga o'tish
+                // background: linear-gradient(45deg, $orange-main, $orange-neon);
+                // // -webkit-background-clip: text;
+                // -webkit-text-fill-color: transparent;
+                color: $orange-main;
+            }
+        }
+    }
+
+    .login_subtitle {
+        color: $text-muted;
+        font-size: 14px;
+        margin-bottom: 35px;
+    }
+}
+
+.login_form {
+    text-align: left;
+
+    .error_message {
+        background-color: rgba($error-color, 0.1);
+        border: 1px solid $error-color;
+        color: $error-color;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 13px;
+        margin-bottom: 20px;
+        text-align: center;
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    .input_group {
+        margin-bottom: 22px;
+
+        label {
+            display: block;
+            color: $text-white;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .label_row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .forgot_link {
+                color: $orange-main;
+                font-size: 12px;
+                text-decoration: none;
+                transition: color 0.2s;
+
+                &:hover {
+                    color: $orange-neon;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 13px 16px;
+            background-color: $input-bg;
+            border: 1px solid #2a2a2a;
+            border-radius: 10px;
+            color: $text-white;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+                border-color: $orange-neon;
+                box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
+            }
+
+            &::placeholder {
+                color: #555555;
+            }
+        }
+    }
+
+    .form_actions {
+        margin-bottom: 25px;
+
+        .remember_me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: $text-muted;
+            font-size: 13px;
+            cursor: pointer;
+
+            input {
+                accent-color: $orange-neon;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+            }
+
+            &:hover span {
+                color: $text-white;
+            }
+        }
+    }
+
+    .btn_login_submit {
+        width: 100%;
+        padding: 14px;
+        // Asosiy tugma rangi siz aytgan ikki xil to'q sariq gradientda
+        background: linear-gradient(90deg, $orange-main, $orange-neon);
+        border: none;
+        border-radius: 10px;
+        color: $bg-black;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 0.1s, opacity 0.2s;
+        box-shadow: 0 4px 20px rgba(255, 87, 34, 0.4);
+
+        &:hover {
+            opacity: 0.95;
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+}
+
+.divider {
+    position: relative;
+    margin: 25px 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #2a2a2a;
+    }
+
+    span {
+        position: relative;
+        background-color: $card-bg;
+        padding: 0 15px;
+        color: $text-muted;
+        font-size: 13px;
+    }
+}
+
+.btn_google {
+    width: 100%;
+    padding: 12px;
+    background-color: $input-bg;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    color: $text-white;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+
+    &:hover {
+        background-color: #252525;
+        border-color: rgba($orange-main, 0.3);
+    }
+}
+
+.signup_redirect {
+    margin-top: 30px;
+    color: $text-muted;
+    font-size: 14px;
+
+    a {
+        color: $orange-neon;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $orange-main;
+            text-decoration: underline;
+        }
+    }
+}
+
+// ... (oldingi o'zgaruvchilar o'z holaticha qoladi)
+
+.input_group {
+    margin-bottom: 22px;
+
+    label {
+        display: block;
+        color: $text-white;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+
+    .label_row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .forgot_link {
+            color: $orange-main;
+            font-size: 12px;
+            text-decoration: none;
+            transition: color 0.2s;
+
+            &:hover {
+                color: $orange-neon;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // Yangi qo'shilgan qism
+    .password_wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        input[type="password"],
+        input[type="text"] {
+            width: 100%;
+            padding: 13px 45px 13px 16px; // O'ng tomondan ko'zcha uchun joy qoldiramiz (45px)
+            background-color: $input-bg;
+            border: 1px solid #2a2a2a;
+            border-radius: 10px;
+            color: $text-white;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+                border-color: $orange-neon;
+                box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
+            }
+
+            &::placeholder {
+                color: #555555;
+            }
+        }
+
+        .toggle_password {
+            position: absolute;
+            right: 15px;
+            background: none;
+            border: none;
+            padding: 0;
+            color: #555555; // Oddiy holatda kulrang
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s;
+
+            &:hover {
+                color: $orange-neon; // Sichqoncha borganda neon olovrang bo'ladi
+            }
+
+            svg {
+                display: block;
+            }
+        }
+
+        // Ko'zcha yoqilganda (parol ko'ringanda) ikonka rangini olovrang saqlash uchun klass
+        &.show_active {
+            .toggle_password {
+                color: $orange-neon;
+            }
+        }
+    }
+}

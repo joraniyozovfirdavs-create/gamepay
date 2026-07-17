@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./scss/savat.css">
+</head>
+
+<body>
+
+
+    <div class="cart_nav_btn" id="openCartBtn">
+        <span class="icon">🛒</span>
+        <span class="cart_count" id="cartCountBadge">0</span>
+    </div>
+
+    <div id="cartModal" class="cart_modal hidden">
+        <div class="cart_content">
+            <div class="cart_header">
+                <h2>Sizning <span>Savatingiz</span></h2>
+                <span id="closeCartBtn" class="close_cart">&times;</span>
+            </div>
+
+            <div class="cart_body" id="cartItemsContainer">
+                <div class="empty_cart_message">
+                    <p>Savatingiz hozircha bo'sh 🎮</p>
+                </div>
+            </div>
+
+            <div class="cart_footer">
+                <div class="total_price_block">
+                    <span>Jami summa:</span>
+                    <span id="cartTotalPrice" class="text_neon">0 so'm</span>
+                </div>
+
+                <form id="checkoutForm">
+                    <div class="form_group">
+                        <label for="playerUID">O'yin ID (UID) kiriting:</label>
+                        <input type="text" id="playerUID" placeholder="Masalan: 514263789" required>
+                    </div>
+                    <button type="submit" class="btn_checkout">Buyurtmani rasmiylashtirish</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/savat.js"></script>
+
+</body>
+
+</html>

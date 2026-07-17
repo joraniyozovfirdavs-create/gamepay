@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamePay - Kirish</title>
+    <link rel="stylesheet" href="./scss/login.css">
+</head>
+
+<body>
+
+    <div class="wrapper login_page_wrapper">
+        <div class="login_container">
+            <div class="login_logo">
+                <img src="./images/logo.png" alt="logo">
+                <h1>Game<span>Pay</span></h1>
+            </div>
+
+            <p class="login_subtitle">Tizimga kirish uchun ma'lumotlaringizni kiriting</p>
+
+            <form id="loginForm" class="login_form">
+
+                <div id="errorMessage" class="error_message hidden"></div>
+
+                <div class="input_group">
+                    <label for="email">Email Pochta</label>
+                    <input type="email" id="email" placeholder="example@gmail.com" required>
+                </div>
+
+                <div class="input_group">
+                    <div class="label_row">
+                        <label for="password">Parol</label>
+                        <a href="#" class="forgot_link">Parolni unutdingizmi?</a>
+                    </div>
+                    <div class="password_wrapper">
+                        <input type="password" id="password" placeholder="••••••••" required>
+                        <button type="button" id="togglePassword" class="toggle_password"
+                            aria-label="Parolni ko'rsatish">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="eye_icon">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form_actions">
+                    <label class="remember_me">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Meni eslab qol</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn_login_submit">Kirish</button>
+            </form>
+
+            <div class="divider">
+                <span>Yoki</span>
+            </div>
+
+            <button class="btn_google">
+                <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" width="20">
+                Google bilan kirish
+            </button>
+
+            <p class="signup_redirect">Hisobingiz yo'qmi? <a href="#">Ro'yxatdan o'ting</a></p>
+        </div>
+    </div>
+
+
+    <script src="./js/login.js"></script>
+</body>
+
+</html>d

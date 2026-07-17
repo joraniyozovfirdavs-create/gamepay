@@ -1,0 +1,206 @@
+.cart_nav_btn {
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 8px;
+  background: #141418;
+  border-radius: 50%;
+  border: 1px solid #222226;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.cart_nav_btn:hover {
+  border-color: #ff5722;
+  box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
+}
+.cart_nav_btn .cart_count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ff5722;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.cart_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 10000;
+  display: flex;
+  justify-content: flex-end;
+  transition: opacity 0.3s ease;
+}
+.cart_modal.hidden {
+  display: none !important;
+}
+.cart_modal .cart_content {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background: #0a0a0c;
+  border-left: 1px solid #222226;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out;
+}
+
+.cart_header {
+  padding: 20px;
+  border-bottom: 1px solid #222226;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart_header h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #ffffff;
+}
+.cart_header h2 span {
+  color: #ff5722;
+}
+.cart_header .close_cart {
+  font-size: 30px;
+  color: #a0a0a0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.cart_header .close_cart:hover {
+  color: #ff4d4d;
+}
+
+.cart_body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.cart_body .empty_cart_message {
+  text-align: center;
+  color: #a0a0a0;
+  margin-top: 50px;
+  font-size: 16px;
+}
+.cart_body .cart_item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #141418;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #222226;
+}
+.cart_body .cart_item img {
+  width: 45px;
+  height: 45px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.cart_body .cart_item .item_details {
+  flex: 1;
+}
+.cart_body .cart_item .item_details h4 {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+.cart_body .cart_item .item_details p {
+  margin: 0;
+  font-size: 13px;
+  color: #ff5722;
+  font-weight: bold;
+}
+.cart_body .cart_item .item_price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.cart_body .cart_item .btn_remove_item {
+  background: transparent;
+  border: none;
+  color: #a0a0a0;
+  cursor: pointer;
+  font-size: 18px;
+}
+.cart_body .cart_item .btn_remove_item:hover {
+  color: #ff4d4d;
+}
+
+.cart_footer {
+  padding: 20px;
+  border-top: 1px solid #222226;
+  background: rgba(255, 255, 255, 0.01);
+}
+.cart_footer .total_price_block {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.cart_footer .total_price_block .text_neon {
+  color: #ff5722;
+  text-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
+}
+.cart_footer #checkoutForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cart_footer #checkoutForm .form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cart_footer #checkoutForm .form_group label {
+  color: #a0a0a0;
+  font-size: 12px;
+}
+.cart_footer #checkoutForm .form_group input {
+  padding: 12px;
+  background: #141416;
+  border: 1px solid #222226;
+  border-radius: 6px;
+  color: #fff;
+  outline: none;
+}
+.cart_footer #checkoutForm .form_group input:focus {
+  border-color: #ff5722;
+}
+.cart_footer #checkoutForm .btn_checkout {
+  background: linear-gradient(90deg, orange, #ff5722);
+  border: none;
+  padding: 14px;
+  color: #000;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.cart_footer #checkoutForm .btn_checkout:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.4);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}/*# sourceMappingURL=savat.css.map */

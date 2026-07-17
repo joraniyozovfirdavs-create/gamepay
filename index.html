@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Pay</title>
+    <link rel="stylesheet" href="./scss/main.css">
+    <link rel="icon" type="image/png" href="./images/logo.png">
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="container">
+                <div class="header_left">
+                    <a href="#">
+                        <img src="./images/logo.png" alt="logo">
+                    </a>
+                </div>
+
+                <nav class="header_menu">
+                    <ul>
+                        <li><a href="#hero" class="nav-link active" data-i18n="nav_home">Asosiy</a></li>
+                        <li><a href="#games_shop" class="nav-link" data-i18n="nav_shop">Shop</a></li>
+                        <li><a href="#why_choose_us" class="nav-link" data-i18n="nav_about">Nega biz</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header_search">
+                    <form class="search_form" role="search" action="/search" method="get">
+                        <label for="site-search" class="visually-hidden" data-i18n="nav_search_label">Qidirish</label>
+
+                        <div class="search-input-wrapper">
+                            <input id="site-search" name="search" type="search" placeholder="O'yin nomi..."
+                                aria-label="Qidirish" data-i18n-placeholder="search_placeholder" autocomplete="off">
+                            <div id="search-suggestions" class="suggestions-box"></div>
+                        </div>
+
+                        <button type="submit" class="search_btn" data-i18n="search_button">Qidirish</button>
+                    </form>
+                </div>
+
+                <div class="header_actions">
+                    <div class="language_select">
+                        <label for="language" class="visually-hidden">Til</label>
+                        <select id="language" name="language" aria-label="Til tanlash">
+                            <option value="uz">UZ</option>
+                            <option value="ru">RU</option>
+                            <option value="en">EN</option>
+                        </select>
+                    </div>
+                    <a href="http://127.0.0.1:5501/login.html" class="btn login_btn" data-i18n="login_button">Kirish</a>
+                    <a href="http://127.0.0.1:5501/savat.html" class="btn cart_btn"><img src="./images/savat.png"
+                            alt="savat" width="25px" height="20px">
+                        <span class="cart_count">0</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- /Header -->
+
+        <section id="hero">
+            <div class="container">
+                <div class="hero_bg_slider"></div>
+
+                <div class="hero_left">
+                    <h1 data-i18n="hero_heading">Game<span>Pay</span> bilan tez va oson</h1>
+                    <p data-i18n="hero_description">
+                        Ko'pchilik hozir donat qilish uchun ishonchli bo'lgan joyni bilishmaydi. Game Pay 100% ishonchli
+                        bo'lib, pul hisobingizdan o'tganidan so'ng darhol donatingiz amalga oshiriladi. Bizga
+                        ishonishingiz mumkin!
+                    </p>
+                    <div class="link_box">
+                        <a class="link-1" href="http://127.0.0.1:5501/login.html" data-i18n="hero_signup">Ro'yhatdan
+                            o'tish</a>
+                        <a class="link-2" href="#" data-i18n="hero_about">Biz haqimizda</a>
+                    </div>
+                </div>
+
+                <div class="hero_right">
+                    <div class="hero_stats">
+                        <div class="hero_stat">
+                            <span class="stat_value counter" data-target="20">0+</span>
+                            <span class="stat_label" data-i18n="stat_games">O'yinlar soni</span>
+                        </div>
+                        <div class="hero_stat">
+                            <span class="stat_value counter" data-target="1500">0+</span>
+                            <span class="stat_label" data-i18n="stat_users">Foydalanuvchilar</span>
+                        </div>
+                        <div class="hero_stat">
+                            <span class="stat_value counter" data-target="16000">0+</span>
+                            <span class="stat_label" data-i18n="stat_donates">Amalga oshirilgan donatlar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main -->
+        <main>
+
+            <section class="carousel">
+                <div class="container">
+                    <div class="carousel-group">
+                        <div class="item">PUBG</div>
+                        <div class="item">Free Fire</div>
+                        <div class="item">Mobile legends</div>
+                        <div class="item">Clash of Clans</div>
+                        <div class="item">FC mobile</div>
+                        <div class="item">eFootball</div>
+                        <div class="item">Telegram Premium</div>
+                        <div class="item">Stand off 2</div>
+                        <div class="item">Brawl Stars</div>
+                    </div>
+                    <div class="carousel-group">
+                        <div class="item">PUBG</div>
+                        <div class="item">Free Fire</div>
+                        <div class="item">Mobile legends</div>
+                        <div class="item">Clash of Clans</div>
+                        <div class="item">FC mobile</div>
+                        <div class="item">eFootball</div>
+                        <div class="item">Telegram Premium</div>
+                        <div class="item">Stand off 2</div>
+                        <div class="item">Brawl Stars</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="games_shop">
+                <div class="container">
+
+                    <div class="shop_header">
+                        <h2 data-i18n="shop_heading">Sevimli o'yiningizni <span>tanlang</span></h2>
+                        <p data-i18n="shop_subheading">Donat qilmoqchi bo'lgan o'yiningiz ustiga bosing va
+                            paketlarni ko'ring</p>
+                    </div>
+
+                    <div class="games_tabs">
+                        <div class="game_tab_card active" data-game="pubg">
+                            <div class="game_img_box">
+                                <img src="images/pubg_img.png" alt="PUBG Mobile">
+                            </div>
+                            <h3 data-i18n="game_pubg">PUBG Mobile</h3>
+                        </div>
+
+                        <div class="game_tab_card" data-game="freefire">
+                            <div class="game_img_box">
+                                <img src="images/freefire_img.png" alt="Free Fire">
+                            </div>
+                            <h3 data-i18n="game_freefire">Free Fire</h3>
+                        </div>
+
+                        <div class="game_tab_card" data-game="mlbb">
+                            <div class="game_img_box">
+                                <img src="images/mlbb_img.png" alt="Mobile Legends">
+                            </div>
+                            <h3 data-i18n="game_mlbb">Mobile Legends</h3>
+                        </div>
+
+                        <div class="game_tab_card" data-game="clash">
+                            <div class="game_img_box">
+                                <img src="images/clash_of_clans.png" alt="Clash of Clans">
+                            </div>
+                            <h3 data-i18n="game_clash">Clash of Clans</h3>
+                        </div>
+
+                        <div class="game_tab_card" data-game="standoff">
+                            <div class="game_img_box">
+                                <img src="images/standoff_2.png" alt="Standoff 2">
+                            </div>
+                            <h3 data-i18n="game_standoff">Stand off 2</h3>
+                        </div>
+
+                        <div class="game_tab_card" data-game="efootball">
+                            <div class="game_img_box">
+                                <img src="images/eFootball.png" alt="eFootball">
+                            </div>
+                            <h3 data-i18n="game_efootball">eFootball</h3>
+                        </div>
+
+                        <div class="game_tab_card" data-game="fc_mobile">
+                            <div class="game_img_box">
+                                <img src="images/fc_mobile.png" alt="FC Mobile">
+                            </div>
+                            <h3 data-i18n="game_fc_mobile">FC Mobile</h3>
+                        </div>
+
+                        <div class="game_tab_card" data-game="honor">
+                            <div class="game_img_box">
+                                <img src="./images/honor_of_kings.png" alt="honor_of_kings">
+                            </div>
+                            <h3>Honor of Kings</h3>
+                        </div>
+
+                        <div class="game_tab_card" data-game="roblox">
+                            <div class="game_img_box">
+                                <img src="./images/roblox.png" alt="Roblox">
+                            </div>
+                            <h3>Roblox</h3>
+                        </div>
+
+                        <div class="game_tab_card" data-game="steam">
+                            <div class="game_img_box">
+                                <img src="./images/steam.png" alt="Steam">
+                            </div>
+                            <h3>Steam</h3>
+                        </div>
+
+                        <div class="game_tab_card" data-game="brawl">
+                            <div class="game_img_box">
+                                <img src="images/brawl_stars.png" alt="Brawl Stars">
+                            </div>
+                            <h3 data-i18n="game_brawl">Brawl Stars</h3>
+                        </div>
+
+                        <div class="game_tab_card" data-game="telegram">
+                            <div class="game_img_box">
+                                <img src="images/telegram_premium.png" alt="Telegram Premium">
+                            </div>
+                            <h3 data-i18n="game_telegram">Telegram Premium</h3>
+                        </div>
+                    </div>
+
+                    <div class="donates_grid">
+
+                        <div class="donate_group pubg_cards" data-group="pubg">
+                            <h3 class="donate_group_title" data-i18n="group_pubg">PUBG paketlari</h3>
+                            <div class="donate_group_cards">
+                                <div class="donate_card" data-game="pubg">
+                                    <span class="donate_badge">UC</span>
+                                    <div class="donate_amount"><span>60</span> <img src="./images/pubg_mobile_uc.png"
+                                            alt="uc" width="50px" height="50px">
+                                    </div>
+                                    <div class="donate_price">12 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="pubg">
+                                    <div class="donate_badge">UC</div>
+                                    <div class="donate_amount">325 <img src="./images/pubg_mobile_uc.png" alt="uc"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">58 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="pubg">
+                                    <div class="donate_badge">UC</div>
+                                    <div class="donate_amount">660 <img src="./images/pubg_mobile_uc.png" alt="uc"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">115 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="pubg">
+                                    <div class="donate_badge">UC</div>
+                                    <div class="donate_amount">60 <img src="./images/pubg_mobile_uc.png" alt="uc"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">12 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+
+                                <div class="donate_card" data-game="pubg">
+                                    <div class="donate_badge">UC</div>
+                                    <div class="donate_amount">60 <img src="./images/pubg_mobile_uc.png" alt="uc"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">12 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="pubg">
+                                    <div class="donate_badge">UC</div>
+                                    <div class="donate_amount">325 <img src="./images/pubg_mobile_uc.png" alt="uc"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">58 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="pubg">
+                                    <div class="donate_badge">UC</div>
+                                    <div class="donate_amount">660 <img src="./images/pubg_mobile_uc.png" alt="uc"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">115 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="pubg">
+                                    <div class="donate_badge">UC</div>
+                                    <div class="donate_amount">60 <img src="./images/pubg_mobile_uc.png" alt="uc"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">12 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="donate_group freefire_cards" data-group="freefire">
+                            <h3 class="donate_group_title" data-i18n="group_freefire">Free Fire paketlari
+                            </h3>
+                            <div class="donate_group_cards">
+                                <div class="donate_card" data-game="freefire">
+                                    <div class="donate_badge ff">Diamond</div>
+                                    <div class="donate_amount">100 <img src="./images/free_fire_diamond.png"
+                                            alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                    <div class="donate_price">15 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="freefire">
+                                    <div class="donate_badge ff">Diamond</div>
+                                    <div class="donate_amount">310 <img src="./images/free_fire_diamond.png"
+                                            alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                    <div class="donate_price">42 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="freefire">
+                                    <div class="donate_badge ff">Diamond</div>
+                                    <div class="donate_amount">100 <img src="./images/free_fire_diamond.png"
+                                            alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                    <div class="donate_price">15 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="freefire">
+                                    <div class="donate_badge ff">Diamond</div>
+                                    <div class="donate_amount">310 <img src="./images/free_fire_diamond.png"
+                                            alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                    <div class="donate_price">42 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="freefire">
+                                    <div class="donate_badge ff">Diamond</div>
+                                    <div class="donate_amount">100 <img src="./images/free_fire_diamond.png"
+                                            alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                    <div class="donate_price">15 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="freefire">
+                                    <div class="donate_badge ff">Diamond</div>
+                                    <div class="donate_amount">310 <img src="./images/free_fire_diamond.png"
+                                            alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                    <div class="donate_price">42 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="freefire">
+                                    <div class="donate_badge ff">Diamond</div>
+                                    <div class="donate_amount">100 <img src="./images/free_fire_diamond.png"
+                                            alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                    <div class="donate_price">15 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="freefire">
+                                    <div class="donate_badge ff">Diamond</div>
+                                    <div class="donate_amount">310 <img src="./images/free_fire_diamond.png"
+                                            alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                    <div class="donate_price">42 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="donate_group mlbb_cards" data-group="mlbb">
+                            <h3 class="donate_group_title" data-i18n="group_mlbb">Mobile Legends paketlari
+                            </h3>
+                            <div class="donate_group_cards">
+                                <div class="donate_card" data-game="mlbb">
+                                    <div class="donate_badge ml">Diamond</div>
+                                    <div class="donate_amount">86 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                            width="60px" height="60px">
+                                    </div>
+                                    <div class="donate_price">22 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="mlbb">
+                                    <div class="donate_badge ml">Diamond</div>
+                                    <div class="donate_amount">257 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                            width="60px" height="60px"></div>
+                                    <div class="donate_price">63 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="mlbb">
+                                    <div class="donate_badge ml">Diamond</div>
+                                    <div class="donate_amount">86 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                            width="60px" height="60px"></div>
+                                    <div class="donate_price">22 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="mlbb">
+                                    <div class="donate_badge ml">Diamond</div>
+                                    <div class="donate_amount">257 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                            width="60px" height="60px"></div>
+                                    <div class="donate_price">63 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="mlbb">
+                                    <div class="donate_badge ml">Diamond</div>
+                                    <div class="donate_amount">86 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                            width="60px" height="60px"></div>
+                                    <div class="donate_price">22 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="mlbb">
+                                    <div class="donate_badge ml">Diamond</div>
+                                    <div class="donate_amount">257 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                            width="60px" height="60px"></div>
+                                    <div class="donate_price">63 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="mlbb">
+                                    <div class="donate_badge ml">Diamond</div>
+                                    <div class="donate_amount">86 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                            width="60px" height="60px"></div>
+                                    <div class="donate_price">22 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="mlbb">
+                                    <div class="donate_badge ml">Diamond</div>
+                                    <div class="donate_amount">257 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                            width="60px" height="60px"></div>
+                                    <div class="donate_price">63 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="donate_group clash_cards" data-group="clash">
+                            <h3 class="donate_group_title" data-i18n="group_clash">Clash of Clans paketlari
+                            </h3>
+                            <div class="donate_group_cards">
+                                <div class="donate_card" data-game="clash">
+                                    <div class="donate_badge clash">Gold</div>
+                                    <div class="donate_amount"><span>500</span> <img src="./images/clash_gems.png"
+                                            alt="clash" width="65px" height="45px"></div>
+                                    <div class="donate_price">20 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="clash">
+                                    <div class="donate_badge clash">Gold</div>
+                                    <div class="donate_amount">1200 <img src="./images/clash_gems.png" alt="clash"
+                                            width="65px" height="45px"></div>
+                                    <div class="donate_price">45 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="clash">
+                                    <div class="donate_badge clash">Gold</div>
+                                    <div class="donate_amount">2500 <img src="./images/clash_gems.png" alt="clash"
+                                            width="65px" height="45px"></div>
+                                    <div class="donate_price">90 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="clash">
+                                    <div class="donate_badge clash">Gold</div>
+                                    <div class="donate_amount">500 <img src="./images/clash_gems.png" alt="clash"
+                                            width="65px" height="45px"></div>
+                                    <div class="donate_price">20 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="clash">
+                                    <div class="donate_badge clash">Gold</div>
+                                    <div class="donate_amount">1200 <img src="./images/clash_gems.png" alt="clash"
+                                            width="65px" height="45px"></div>
+                                    <div class="donate_price">45 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="clash">
+                                    <div class="donate_badge clash">Gold</div>
+                                    <div class="donate_amount">2500 <img src="./images/clash_gems.png" alt="clash"
+                                            width="65px" height="45px"></div>
+                                    <div class="donate_price">90 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="clash">
+                                    <div class="donate_badge clash">Gold</div>
+                                    <div class="donate_amount">500 <img src="./images/clash_gems.png" alt="clash"
+                                            width="65px" height="45px"></div>
+                                    <div class="donate_price">20 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="clash">
+                                    <div class="donate_badge clash">Gold</div>
+                                    <div class="donate_amount">1200 <img src="./images/clash_gems.png" alt="clash"
+                                            width="65px" height="45px"></div>
+                                    <div class="donate_price">45 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="donate_group standoff_cards" data-group="standoff">
+                            <h3 class="donate_group_title" data-i18n="group_standoff">Standoff 2 paketlari
+                            </h3>
+                            <div class="donate_group_cards">
+                                <div class="donate_card" data-game="standoff">
+                                    <div class="donate_badge standoff">Gold</div>
+                                    <div class="donate_amount">200 <img src="./images/standoff_2_gold.png"
+                                            alt="standoff_2_gold" width="50px" height="60px"></div>
+                                    <div class="donate_price">18 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="standoff">
+                                    <div class="donate_badge standoff">Gold</div>
+                                    <div class="donate_amount">500 <img src="./images/standoff_2_gold.png"
+                                            alt="standoff_2_gold" width="50px" height="60px"></div>
+                                    <div class="donate_price">40 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="standoff">
+                                    <div class="donate_badge standoff">Gold</div>
+                                    <div class="donate_amount">1000 <img src="./images/standoff_2_gold.png"
+                                            alt="standoff_2_gold" width="50px" height="60px"></div>
+                                    <div class="donate_price">75 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="standoff">
+                                    <div class="donate_badge standoff">Gold</div>
+                                    <div class="donate_amount">200 <img src="./images/standoff_2_gold.png"
+                                            alt="standoff_2_gold" width="50px" height="60px"></div>
+                                    <div class="donate_price">18 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="standoff">
+                                    <div class="donate_badge standoff">Gold</div>
+                                    <div class="donate_amount">500 <img src="./images/standoff_2_gold.png"
+                                            alt="standoff_2_gold" width="50px" height="60px"></div>
+                                    <div class="donate_price">40 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="standoff">
+                                    <div class="donate_badge standoff">Gold</div>
+                                    <div class="donate_amount">1000 <img src="./images/standoff_2_gold.png"
+                                            alt="standoff_2_gold" width="50px" height="60px"></div>
+                                    <div class="donate_price">75 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="standoff">
+                                    <div class="donate_badge standoff">Gold</div>
+                                    <div class="donate_amount">200 <img src="./images/standoff_2_gold.png"
+                                            alt="standoff_2_gold" width="50px" height="60px"></div>
+                                    <div class="donate_price">18 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="standoff">
+                                    <div class="donate_badge standoff">Gold</div>
+                                    <div class="donate_amount">500 <img src="./images/standoff_2_gold.png"
+                                            alt="standoff_2_gold" width="50px" height="60px"></div>
+                                    <div class="donate_price">40 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="donate_group efootball_cards" data-group="efootball">
+                            <h3 class="donate_group_title" data-i18n="group_efootball">eFootball paketlari
+                            </h3>
+                            <div class="donate_group_cards">
+                                <div class="donate_card" data-game="efootball">
+                                    <div class="donate_badge efootball">GP</div>
+                                    <div class="donate_amount">1000 <img src="./images/eFootball_coin.png"
+                                            alt="eFootball" width="40px" height="40px"></div>
+                                    <div class="donate_price">28 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="efootball">
+                                    <div class="donate_badge efootball">GP</div>
+                                    <div class="donate_amount">2500 <img src="./images/eFootball_coin.png"
+                                            alt="eFootball" width="40px" height="40px"></div>
+                                    <div class="donate_price">65 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="efootball">
+                                    <div class="donate_badge efootball">GP</div>
+                                    <div class="donate_amount">5000 <img src="./images/eFootball_coin.png"
+                                            alt="eFootball" width="40px" height="40px"></div>
+                                    <div class="donate_price">120 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="efootball">
+                                    <div class="donate_badge efootball">GP</div>
+                                    <div class="donate_amount">10000 <img src="./images/eFootball_coin.png"
+                                            alt="eFootball" width="40px" height="40px"></div>
+                                    <div class="donate_price">220 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="efootball">
+                                    <div class="donate_badge efootball">GP</div>
+                                    <div class="donate_amount">1500 <img src="./images/eFootball_coin.png"
+                                            alt="eFootball" width="40px" height="40px"></div>
+                                    <div class="donate_price">40 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="efootball">
+                                    <div class="donate_badge efootball">GP</div>
+                                    <div class="donate_amount">3000 <img src="./images/eFootball_coin.png"
+                                            alt="eFootball" width="40px" height="40px"></div>
+                                    <div class="donate_price">80 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="efootball">
+                                    <div class="donate_badge efootball">GP</div>
+                                    <div class="donate_amount">6000 <img src="./images/eFootball_coin.png"
+                                            alt="eFootball" width="40px" height="40px"></div>
+                                    <div class="donate_price">150 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="efootball">
+                                    <div class="donate_badge efootball">GP</div>
+                                    <div class="donate_amount">12000 <img src="./images/eFootball_coin.png"
+                                            alt="eFootball" width="40px" height="40px"></div>
+                                    <div class="donate_price">260 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="donate_group fc_mobile_cards" data-group="fc_mobile">
+                            <h3 class="donate_group_title" data-i18n="group_fc_mobile">FC Mobile paketlari
+                            </h3>
+                            <div class="donate_group_cards">
+                                <div class="donate_card" data-game="fc_mobile">
+                                    <div class="donate_badge fc_mobile">Coins</div>
+                                    <div class="donate_amount">1000 <img src="./images/fc_mobile_fcpoint.png"
+                                            alt="FC Mobile" width="60px" height="60px"></div>
+                                    <div class="donate_price">30 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="fc_mobile">
+                                    <div class="donate_badge fc_mobile">Coins</div>
+                                    <div class="donate_amount">2500 <img src="./images/fc_mobile_fcpoint.png"
+                                            alt="FC Mobile" width="60px" height="60px"></div>
+                                    <div class="donate_price">70 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="fc_mobile">
+                                    <div class="donate_badge fc_mobile">Coins</div>
+                                    <div class="donate_amount">5000 <img src="./images/fc_mobile_fcpoint.png"
+                                            alt="FC Mobile" width="60px" height="60px"></div>
+                                    <div class="donate_price">130 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="fc_mobile">
+                                    <div class="donate_badge fc_mobile">Coins</div>
+                                    <div class="donate_amount">10000 <img src="./images/fc_mobile_fcpoint.png"
+                                            alt="FC Mobile" width="60px" height="60px"></div>
+                                    <div class="donate_price">240 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="fc_mobile">
+                                    <div class="donate_badge fc_mobile">Coins</div>
+                                    <div class="donate_amount">1500 <img src="./images/fc_mobile_fcpoint.png"
+                                            alt="FC Mobile" width="60px" height="60px"></div>
+                                    <div class="donate_price">42 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="fc_mobile">
+                                    <div class="donate_badge fc_mobile">Coins</div>
+                                    <div class="donate_amount">3000 <img src="./images/fc_mobile_fcpoint.png"
+                                            alt="FC Mobile" width="60px" height="60px"></div>
+                                    <div class="donate_price">82 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="fc_mobile">
+                                    <div class="donate_badge fc_mobile">Coins</div>
+                                    <div class="donate_amount">6000 <img src="./images/fc_mobile_fcpoint.png"
+                                            alt="FC Mobile" width="60px" height="60px"></div>
+                                    <div class="donate_price">160 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="fc_mobile">
+                                    <div class="donate_badge fc_mobile">Coins</div>
+                                    <div class="donate_amount">12000 <img src="./images/fc_mobile_fcpoint.png"
+                                            alt="FC Mobile" width="60px" height="60px"></div>
+                                    <div class="donate_price">280 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="donate_group brawl_cards" data-group="brawl">
+                            <h3 class="donate_group_title" data-i18n="group_brawl">Brawl Stars paketlari</h3>
+                            <div class="donate_group_cards">
+                                <div class="donate_card" data-game="brawl">
+                                    <div class="donate_badge">Gems</div>
+                                    <div class="donate_amount">80 <img src="./images/brawl_stars_gems.png" alt="Gems"
+                                            width="60px" height="50px"></div>
+                                    <div class="donate_price">18 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="brawl">
+                                    <div class="donate_badge">Gems</div>
+                                    <div class="donate_amount">240 <img src="./images/brawl_stars_gems.png" alt="Gems"
+                                            width="60px" height="50px"></div>
+                                    <div class="donate_price">45 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="brawl">
+                                    <div class="donate_badge">Gems</div>
+                                    <div class="donate_amount">500 <img src="./images/brawl_stars_gems.png" alt="Gems"
+                                            width="60px" height="50px"></div>
+                                    <div class="donate_price">85 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="brawl">
+                                    <div class="donate_badge">Gems</div>
+                                    <div class="donate_amount">80 <img src="./images/brawl_stars_gems.png" alt="Gems"
+                                            width="60px" height="50px"></div>
+                                    <div class="donate_price">18 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="brawl">
+                                    <div class="donate_badge">Gems</div>
+                                    <div class="donate_amount">240 <img src="./images/brawl_stars_gems.png" alt="Gems"
+                                            width="60px" height="50px"></div>
+                                    <div class="donate_price">45 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="brawl">
+                                    <div class="donate_badge">Gems</div>
+                                    <div class="donate_amount">500 <img src="./images/brawl_stars_gems.png" alt="Gems"
+                                            width="60px" height="50px"></div>
+                                    <div class="donate_price">85 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="brawl">
+                                    <div class="donate_badge">Gems</div>
+                                    <div class="donate_amount">80 <img src="./images/brawl_stars_gems.png" alt="Gems"
+                                            width="60px" height="50px"></div>
+                                    <div class="donate_price">18 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="brawl">
+                                    <div class="donate_badge">Gems</div>
+                                    <div class="donate_amount">240 <img src="./images/brawl_stars_gems.png" alt="Gems"
+                                            width="60px" height="50px"></div>
+                                    <div class="donate_price">45 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="donate_group honor_cards" data-group="honor">
+                            <h3 class="donate_group_title">Honor of Kings paketlari</h3>
+                            <div class="donate_group_cards">
+                                <div class="donate_card" data-game="honor">
+                                    <div class="donate_badge">Diam</div>
+                                    <div class="donate_amount">120 <img src="./images/honor.png" alt="honor"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">28 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="honor">
+                                    <div class="donate_badge">Diam</div>
+                                    <div class="donate_amount">300 <img src="./images/honor.png" alt="honor"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">65 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="honor">
+                                    <div class="donate_badge">Diam</div>
+                                    <div class="donate_amount">560 <img src="./images/honor.png" alt="honor"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">120 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="honor">
+                                    <div class="donate_badge">Diam</div>
+                                    <div class="donate_amount">90 <img src="./images/honor.png" alt="honor" width="50px"
+                                            height="50px"></div>
+                                    <div class="donate_price">20 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="honor">
+                                    <div class="donate_badge">Diam</div>
+                                    <div class="donate_amount">180 <img src="./images/honor.png" alt="honor"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">35 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="honor">
+                                    <div class="donate_badge">Diam</div>
+                                    <div class="donate_amount">420 <img src="./images/honor.png" alt="honor"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">90 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="honor">
+                                    <div class="donate_badge">Diam</div>
+                                    <div class="donate_amount">750 <img src="./images/honor.png" alt="honor"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">160 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="honor">
+                                    <div class="donate_badge">Diam</div>
+                                    <div class="donate_amount">100 <img src="./images/honor.png" alt="honor"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">22 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="honor">
+                                    <div class="donate_badge">Diam</div>
+                                    <div class="donate_amount">330 <img src="./images/honor.png" alt="honor"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">75 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="honor">
+                                    <div class="donate_badge">Diam</div>
+                                    <div class="donate_amount">1400 <img src="./images/honor.png" alt="honor"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">300 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="donate_group roblox_cards" data-group="roblox">
+                            <h3 class="donate_group_title">Roblox paketlari</h3>
+                            <div class="donate_group_cards">
+                                <div class="donate_card" data-game="roblox">
+                                    <div class="donate_badge">Robux</div>
+                                    <div class="donate_amount">80 <img src="./images/roblox.png" alt="roblox"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">20 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="roblox">
+                                    <div class="donate_badge">Robux</div>
+                                    <div class="donate_amount">200 <img src="./images/roblox.png" alt="roblox"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">48 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="roblox">
+                                    <div class="donate_badge">Robux</div>
+                                    <div class="donate_amount">450 <img src="./images/roblox.png" alt="roblox"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">100 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="roblox">
+                                    <div class="donate_badge">Robux</div>
+                                    <div class="donate_amount">30 <img src="./images/roblox.png" alt="roblox"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">8 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="roblox">
+                                    <div class="donate_badge">Robux</div>
+                                    <div class="donate_amount">120 <img src="./images/roblox.png" alt="roblox"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">28 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="roblox">
+                                    <div class="donate_badge">Robux</div>
+                                    <div class="donate_amount">350 <img src="./images/roblox.png" alt="roblox"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">80 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="roblox">
+                                    <div class="donate_badge">Robux</div>
+                                    <div class="donate_amount">600 <img src="./images/roblox.png" alt="roblox"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">140 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="roblox">
+                                    <div class="donate_badge">Robux</div>
+                                    <div class="donate_amount">15 <img src="./images/roblox.png" alt="roblox"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">5 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="roblox">
+                                    <div class="donate_badge">Robux</div>
+                                    <div class="donate_amount">1000 <img src="./images/roblox.png" alt="roblox"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">220 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="roblox">
+                                    <div class="donate_badge">Robux</div>
+                                    <div class="donate_amount">2500 <img src="./images/roblox.png" alt="roblox"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">520 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="donate_group steam_cards" data-group="steam">
+                            <h3 class="donate_group_title">Steam paketlari</h3>
+                            <div class="donate_group_cards">
+                                <div class="donate_card" data-game="steam">
+                                    <div class="donate_badge">Key</div>
+                                    <div class="donate_amount">$5 <img src="./images/steam.png" alt="steam" width="50px"
+                                            height="50px"></div>
+                                    <div class="donate_price">~ 60 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="steam">
+                                    <div class="donate_badge">Key</div>
+                                    <div class="donate_amount">$10 <img src="./images/steam.png" alt="steam"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">~ 120 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="steam">
+                                    <div class="donate_badge">Key</div>
+                                    <div class="donate_amount">$20 <img src="./images/steam.png" alt="steam"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">~ 240 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="steam">
+                                    <div class="donate_badge">Key</div>
+                                    <div class="donate_amount">$1 <img src="./images/steam.png" alt="steam" width="50px"
+                                            height="50px"></div>
+                                    <div class="donate_price">~ 12 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="steam">
+                                    <div class="donate_badge">Key</div>
+                                    <div class="donate_amount">$50 <img src="./images/steam.png" alt="steam"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">~ 600 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="steam">
+                                    <div class="donate_badge">Key</div>
+                                    <div class="donate_amount">$15 <img src="./images/steam.png" alt="steam"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">~ 180 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="steam">
+                                    <div class="donate_badge">Key</div>
+                                    <div class="donate_amount">$2 <img src="./images/steam.png" alt="steam" width="50px"
+                                            height="50px"></div>
+                                    <div class="donate_price">~ 24 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="steam">
+                                    <div class="donate_badge">Key</div>
+                                    <div class="donate_amount">$7 <img src="./images/steam.png" alt="steam" width="50px"
+                                            height="50px"></div>
+                                    <div class="donate_price">~ 84 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="steam">
+                                    <div class="donate_badge">Key</div>
+                                    <div class="donate_amount">$25 <img src="./images/steam.png" alt="steam"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">~ 300 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="steam">
+                                    <div class="donate_badge">Key</div>
+                                    <div class="donate_amount">$100 <img src="./images/steam.png" alt="steam"
+                                            width="50px" height="50px"></div>
+                                    <div class="donate_price">~ 1 200 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="donate_group telegram_cards" data-group="telegram">
+                            <h3 class="donate_group_title" data-i18n="group_telegram">Telegram Premium paketlari
+                            </h3>
+                            <div class="donate_group_cards">
+                                <div class="donate_card" data-game="telegram">
+                                    <div class="donate_badge">Premium</div>
+                                    <div class="donate_amount">1 oy</div>
+                                    <div class="donate_price">25 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="telegram">
+                                    <div class="donate_badge">Premium</div>
+                                    <div class="donate_amount">3 oy</div>
+                                    <div class="donate_price">65 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="telegram">
+                                    <div class="donate_badge">Premium</div>
+                                    <div class="donate_amount">6 oy</div>
+                                    <div class="donate_price">220 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                                <div class="donate_card" data-game="telegram">
+                                    <div class="donate_badge">Premium</div>
+                                    <div class="donate_amount">12 oy</div>
+                                    <div class="donate_price">380 000 so'm</div>
+                                    <button class="btn_buy">Sotib olish</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- <section id="game_">
+                    <div class="container">
+
+                        <div class="donates_grid">
+
+                            <div class="donate_group pubg_cards" data-group="pubg">
+                                <h3 class="donate_group_title" data-i18n="group_pubg">PUBG paketlari</h3>
+                                <div class="donate_group_cards">
+                                    <div class="donate_card" data-game="pubg">
+                                        <span class="donate_badge">UC</span>
+                                        <div class="donate_amount"><span>60</span> <img
+                                                src="./images/pubg_mobile_uc.png" alt="uc" width="50px" height="50px">
+                                        </div>
+                                        <div class="donate_price">12 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="pubg">
+                                        <div class="donate_badge">UC</div>
+                                        <div class="donate_amount">325 <img src="./images/pubg_mobile_uc.png" alt="uc"
+                                                width="50px" height="50px"></div>
+                                        <div class="donate_price">58 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="pubg">
+                                        <div class="donate_badge">UC</div>
+                                        <div class="donate_amount">660 <img src="./images/pubg_mobile_uc.png" alt="uc"
+                                                width="50px" height="50px"></div>
+                                        <div class="donate_price">115 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="pubg">
+                                        <div class="donate_badge">UC</div>
+                                        <div class="donate_amount">60 <img src="./images/pubg_mobile_uc.png" alt="uc"
+                                                width="50px" height="50px"></div>
+                                        <div class="donate_price">12 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+
+                                    <div class="donate_card" data-game="pubg">
+                                        <div class="donate_badge">UC</div>
+                                        <div class="donate_amount">60 <img src="./images/pubg_mobile_uc.png" alt="uc"
+                                                width="50px" height="50px"></div>
+                                        <div class="donate_price">12 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="pubg">
+                                        <div class="donate_badge">UC</div>
+                                        <div class="donate_amount">325 <img src="./images/pubg_mobile_uc.png" alt="uc"
+                                                width="50px" height="50px"></div>
+                                        <div class="donate_price">58 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="pubg">
+                                        <div class="donate_badge">UC</div>
+                                        <div class="donate_amount">660 <img src="./images/pubg_mobile_uc.png" alt="uc"
+                                                width="50px" height="50px"></div>
+                                        <div class="donate_price">115 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="pubg">
+                                        <div class="donate_badge">UC</div>
+                                        <div class="donate_amount">60 <img src="./images/pubg_mobile_uc.png" alt="uc"
+                                                width="50px" height="50px"></div>
+                                        <div class="donate_price">12 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="donate_group freefire_cards" data-group="freefire">
+                                <h3 class="donate_group_title" data-i18n="group_freefire">Free Fire paketlari
+                                </h3>
+                                <div class="donate_group_cards">
+                                    <div class="donate_card" data-game="freefire">
+                                        <div class="donate_badge ff">Diamond</div>
+                                        <div class="donate_amount">100 <img src="./images/free_fire_diamond.png"
+                                                alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                        <div class="donate_price">15 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="freefire">
+                                        <div class="donate_badge ff">Diamond</div>
+                                        <div class="donate_amount">310 <img src="./images/free_fire_diamond.png"
+                                                alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                        <div class="donate_price">42 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="freefire">
+                                        <div class="donate_badge ff">Diamond</div>
+                                        <div class="donate_amount">100 <img src="./images/free_fire_diamond.png"
+                                                alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                        <div class="donate_price">15 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="freefire">
+                                        <div class="donate_badge ff">Diamond</div>
+                                        <div class="donate_amount">310 <img src="./images/free_fire_diamond.png"
+                                                alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                        <div class="donate_price">42 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="freefire">
+                                        <div class="donate_badge ff">Diamond</div>
+                                        <div class="donate_amount">100 <img src="./images/free_fire_diamond.png"
+                                                alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                        <div class="donate_price">15 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="freefire">
+                                        <div class="donate_badge ff">Diamond</div>
+                                        <div class="donate_amount">310 <img src="./images/free_fire_diamond.png"
+                                                alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                        <div class="donate_price">42 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="freefire">
+                                        <div class="donate_badge ff">Diamond</div>
+                                        <div class="donate_amount">100 <img src="./images/free_fire_diamond.png"
+                                                alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                        <div class="donate_price">15 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="freefire">
+                                        <div class="donate_badge ff">Diamond</div>
+                                        <div class="donate_amount">310 <img src="./images/free_fire_diamond.png"
+                                                alt="Free_fire_diamond" width="60px" height="60px"></div>
+                                        <div class="donate_price">42 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="donate_group mlbb_cards" data-group="mlbb">
+                                <h3 class="donate_group_title" data-i18n="group_mlbb">Mobile Legends paketlari
+                                </h3>
+                                <div class="donate_group_cards">
+                                    <div class="donate_card" data-game="mlbb">
+                                        <div class="donate_badge ml">Diamond</div>
+                                        <div class="donate_amount">86 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                                width="60px" height="60px">
+                                        </div>
+                                        <div class="donate_price">22 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="mlbb">
+                                        <div class="donate_badge ml">Diamond</div>
+                                        <div class="donate_amount">257 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                                width="60px" height="60px"></div>
+                                        <div class="donate_price">63 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="mlbb">
+                                        <div class="donate_badge ml">Diamond</div>
+                                        <div class="donate_amount">86 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                                width="60px" height="60px"></div>
+                                        <div class="donate_price">22 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="mlbb">
+                                        <div class="donate_badge ml">Diamond</div>
+                                        <div class="donate_amount">257 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                                width="60px" height="60px"></div>
+                                        <div class="donate_price">63 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="mlbb">
+                                        <div class="donate_badge ml">Diamond</div>
+                                        <div class="donate_amount">86 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                                width="60px" height="60px"></div>
+                                        <div class="donate_price">22 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="mlbb">
+                                        <div class="donate_badge ml">Diamond</div>
+                                        <div class="donate_amount">257 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                                width="60px" height="60px"></div>
+                                        <div class="donate_price">63 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="mlbb">
+                                        <div class="donate_badge ml">Diamond</div>
+                                        <div class="donate_amount">86 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                                width="60px" height="60px"></div>
+                                        <div class="donate_price">22 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="mlbb">
+                                        <div class="donate_badge ml">Diamond</div>
+                                        <div class="donate_amount">257 <img src="./images/mlbb-almaz.png" alt="mlbb"
+                                                width="60px" height="60px"></div>
+                                        <div class="donate_price">63 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="donate_group clash_cards" data-group="clash">
+                                <h3 class="donate_group_title" data-i18n="group_clash">Clash of Clans paketlari
+                                </h3>
+                                <div class="donate_group_cards">
+                                    <div class="donate_card" data-game="clash">
+                                        <div class="donate_badge clash">Gold</div>
+                                        <div class="donate_amount"><span>500</span> <img src="./images/clash_gems.png"
+                                                alt="clash" width="65px" height="45px"></div>
+                                        <div class="donate_price">20 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="clash">
+                                        <div class="donate_badge clash">Gold</div>
+                                        <div class="donate_amount">1200 <img src="./images/clash_gems.png" alt="clash"
+                                                width="65px" height="45px"></div>
+                                        <div class="donate_price">45 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="clash">
+                                        <div class="donate_badge clash">Gold</div>
+                                        <div class="donate_amount">2500 <img src="./images/clash_gems.png" alt="clash"
+                                                width="65px" height="45px"></div>
+                                        <div class="donate_price">90 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="clash">
+                                        <div class="donate_badge clash">Gold</div>
+                                        <div class="donate_amount">500 <img src="./images/clash_gems.png" alt="clash"
+                                                width="65px" height="45px"></div>
+                                        <div class="donate_price">20 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="clash">
+                                        <div class="donate_badge clash">Gold</div>
+                                        <div class="donate_amount">1200 <img src="./images/clash_gems.png" alt="clash"
+                                                width="65px" height="45px"></div>
+                                        <div class="donate_price">45 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="clash">
+                                        <div class="donate_badge clash">Gold</div>
+                                        <div class="donate_amount">2500 <img src="./images/clash_gems.png" alt="clash"
+                                                width="65px" height="45px"></div>
+                                        <div class="donate_price">90 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="clash">
+                                        <div class="donate_badge clash">Gold</div>
+                                        <div class="donate_amount">500 <img src="./images/clash_gems.png" alt="clash"
+                                                width="65px" height="45px"></div>
+                                        <div class="donate_price">20 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="clash">
+                                        <div class="donate_badge clash">Gold</div>
+                                        <div class="donate_amount">1200 <img src="./images/clash_gems.png" alt="clash"
+                                                width="65px" height="45px"></div>
+                                        <div class="donate_price">45 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="donate_group standoff_cards" data-group="standoff">
+                                <h3 class="donate_group_title" data-i18n="group_standoff">Standoff 2 paketlari
+                                </h3>
+                                <div class="donate_group_cards">
+                                    <div class="donate_card" data-game="standoff">
+                                        <div class="donate_badge standoff">Gold</div>
+                                        <div class="donate_amount">200 <img src="./images/standoff_2_gold.png"
+                                                alt="standoff_2_gold" width="50px" height="60px"></div>
+                                        <div class="donate_price">18 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="standoff">
+                                        <div class="donate_badge standoff">Gold</div>
+                                        <div class="donate_amount">500 <img src="./images/standoff_2_gold.png"
+                                                alt="standoff_2_gold" width="50px" height="60px"></div>
+                                        <div class="donate_price">40 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="standoff">
+                                        <div class="donate_badge standoff">Gold</div>
+                                        <div class="donate_amount">1000 <img src="./images/standoff_2_gold.png"
+                                                alt="standoff_2_gold" width="50px" height="60px"></div>
+                                        <div class="donate_price">75 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="standoff">
+                                        <div class="donate_badge standoff">Gold</div>
+                                        <div class="donate_amount">200 <img src="./images/standoff_2_gold.png"
+                                                alt="standoff_2_gold" width="50px" height="60px"></div>
+                                        <div class="donate_price">18 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="standoff">
+                                        <div class="donate_badge standoff">Gold</div>
+                                        <div class="donate_amount">500 <img src="./images/standoff_2_gold.png"
+                                                alt="standoff_2_gold" width="50px" height="60px"></div>
+                                        <div class="donate_price">40 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="standoff">
+                                        <div class="donate_badge standoff">Gold</div>
+                                        <div class="donate_amount">1000 <img src="./images/standoff_2_gold.png"
+                                                alt="standoff_2_gold" width="50px" height="60px"></div>
+                                        <div class="donate_price">75 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="standoff">
+                                        <div class="donate_badge standoff">Gold</div>
+                                        <div class="donate_amount">200 <img src="./images/standoff_2_gold.png"
+                                                alt="standoff_2_gold" width="50px" height="60px"></div>
+                                        <div class="donate_price">18 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="standoff">
+                                        <div class="donate_badge standoff">Gold</div>
+                                        <div class="donate_amount">500 <img src="./images/standoff_2_gold.png"
+                                                alt="standoff_2_gold" width="50px" height="60px"></div>
+                                        <div class="donate_price">40 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="donate_group efootball_cards" data-group="efootball">
+                                <h3 class="donate_group_title" data-i18n="group_efootball">eFootball paketlari
+                                </h3>
+                                <div class="donate_group_cards">
+                                    <div class="donate_card" data-game="efootball">
+                                        <div class="donate_badge efootball">GP</div>
+                                        <div class="donate_amount">1000 <img src="./images/eFootball_coin.png"
+                                                alt="eFootball" width="40px" height="40px"></div>
+                                        <div class="donate_price">28 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="efootball">
+                                        <div class="donate_badge efootball">GP</div>
+                                        <div class="donate_amount">2500 <img src="./images/eFootball_coin.png"
+                                                alt="eFootball" width="40px" height="40px"></div>
+                                        <div class="donate_price">65 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="efootball">
+                                        <div class="donate_badge efootball">GP</div>
+                                        <div class="donate_amount">5000 <img src="./images/eFootball_coin.png"
+                                                alt="eFootball" width="40px" height="40px"></div>
+                                        <div class="donate_price">120 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="efootball">
+                                        <div class="donate_badge efootball">GP</div>
+                                        <div class="donate_amount">10000 <img src="./images/eFootball_coin.png"
+                                                alt="eFootball" width="40px" height="40px"></div>
+                                        <div class="donate_price">220 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="efootball">
+                                        <div class="donate_badge efootball">GP</div>
+                                        <div class="donate_amount">1500 <img src="./images/eFootball_coin.png"
+                                                alt="eFootball" width="40px" height="40px"></div>
+                                        <div class="donate_price">40 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="efootball">
+                                        <div class="donate_badge efootball">GP</div>
+                                        <div class="donate_amount">3000 <img src="./images/eFootball_coin.png"
+                                                alt="eFootball" width="40px" height="40px"></div>
+                                        <div class="donate_price">80 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="efootball">
+                                        <div class="donate_badge efootball">GP</div>
+                                        <div class="donate_amount">6000 <img src="./images/eFootball_coin.png"
+                                                alt="eFootball" width="40px" height="40px"></div>
+                                        <div class="donate_price">150 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="efootball">
+                                        <div class="donate_badge efootball">GP</div>
+                                        <div class="donate_amount">12000 <img src="./images/eFootball_coin.png"
+                                                alt="eFootball" width="40px" height="40px"></div>
+                                        <div class="donate_price">260 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="donate_group fc_mobile_cards" data-group="fc_mobile">
+                                <h3 class="donate_group_title" data-i18n="group_fc_mobile">FC Mobile paketlari
+                                </h3>
+                                <div class="donate_group_cards">
+                                    <div class="donate_card" data-game="fc_mobile">
+                                        <div class="donate_badge fc_mobile">Coins</div>
+                                        <div class="donate_amount">1000 <img src="./images/fc_mobile_fcpoint.png"
+                                                alt="FC Mobile" width="60px" height="60px"></div>
+                                        <div class="donate_price">30 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="fc_mobile">
+                                        <div class="donate_badge fc_mobile">Coins</div>
+                                        <div class="donate_amount">2500 <img src="./images/fc_mobile_fcpoint.png"
+                                                alt="FC Mobile" width="60px" height="60px"></div>
+                                        <div class="donate_price">70 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="fc_mobile">
+                                        <div class="donate_badge fc_mobile">Coins</div>
+                                        <div class="donate_amount">5000 <img src="./images/fc_mobile_fcpoint.png"
+                                                alt="FC Mobile" width="60px" height="60px"></div>
+                                        <div class="donate_price">130 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="fc_mobile">
+                                        <div class="donate_badge fc_mobile">Coins</div>
+                                        <div class="donate_amount">10000 <img src="./images/fc_mobile_fcpoint.png"
+                                                alt="FC Mobile" width="60px" height="60px"></div>
+                                        <div class="donate_price">240 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="fc_mobile">
+                                        <div class="donate_badge fc_mobile">Coins</div>
+                                        <div class="donate_amount">1500 <img src="./images/fc_mobile_fcpoint.png"
+                                                alt="FC Mobile" width="60px" height="60px"></div>
+                                        <div class="donate_price">42 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="fc_mobile">
+                                        <div class="donate_badge fc_mobile">Coins</div>
+                                        <div class="donate_amount">3000 <img src="./images/fc_mobile_fcpoint.png"
+                                                alt="FC Mobile" width="60px" height="60px"></div>
+                                        <div class="donate_price">82 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="fc_mobile">
+                                        <div class="donate_badge fc_mobile">Coins</div>
+                                        <div class="donate_amount">6000 <img src="./images/fc_mobile_fcpoint.png"
+                                                alt="FC Mobile" width="60px" height="60px"></div>
+                                        <div class="donate_price">160 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="fc_mobile">
+                                        <div class="donate_badge fc_mobile">Coins</div>
+                                        <div class="donate_amount">12000 <img src="./images/fc_mobile_fcpoint.png"
+                                                alt="FC Mobile" width="60px" height="60px"></div>
+                                        <div class="donate_price">280 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="donate_group brawl_cards" data-group="brawl">
+                                <h3 class="donate_group_title" data-i18n="group_brawl">Brawl Stars paketlari</h3>
+                                <div class="donate_group_cards">
+                                    <div class="donate_card" data-game="brawl">
+                                        <div class="donate_badge">Gems</div>
+                                        <div class="donate_amount">80 <img src="./images/brawl_stars_gems.png"
+                                                alt="Gems" width="60px" height="50px"></div>
+                                        <div class="donate_price">18 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="brawl">
+                                        <div class="donate_badge">Gems</div>
+                                        <div class="donate_amount">240 <img src="./images/brawl_stars_gems.png"
+                                                alt="Gems" width="60px" height="50px"></div>
+                                        <div class="donate_price">45 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="brawl">
+                                        <div class="donate_badge">Gems</div>
+                                        <div class="donate_amount">500 <img src="./images/brawl_stars_gems.png"
+                                                alt="Gems" width="60px" height="50px"></div>
+                                        <div class="donate_price">85 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="brawl">
+                                        <div class="donate_badge">Gems</div>
+                                        <div class="donate_amount">80 <img src="./images/brawl_stars_gems.png"
+                                                alt="Gems" width="60px" height="50px"></div>
+                                        <div class="donate_price">18 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="brawl">
+                                        <div class="donate_badge">Gems</div>
+                                        <div class="donate_amount">240 <img src="./images/brawl_stars_gems.png"
+                                                alt="Gems" width="60px" height="50px"></div>
+                                        <div class="donate_price">45 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="brawl">
+                                        <div class="donate_badge">Gems</div>
+                                        <div class="donate_amount">500 <img src="./images/brawl_stars_gems.png"
+                                                alt="Gems" width="60px" height="50px"></div>
+                                        <div class="donate_price">85 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="brawl">
+                                        <div class="donate_badge">Gems</div>
+                                        <div class="donate_amount">80 <img src="./images/brawl_stars_gems.png"
+                                                alt="Gems" width="60px" height="50px"></div>
+                                        <div class="donate_price">18 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="brawl">
+                                        <div class="donate_badge">Gems</div>
+                                        <div class="donate_amount">240 <img src="./images/brawl_stars_gems.png"
+                                                alt="Gems" width="60px" height="50px"></div>
+                                        <div class="donate_price">45 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="donate_group telegram_cards" data-group="telegram">
+                                <h3 class="donate_group_title" data-i18n="group_telegram">Telegram Premium paketlari
+                                </h3>
+                                <div class="donate_group_cards">
+                                    <div class="donate_card" data-game="telegram">
+                                        <div class="donate_badge">Premium</div>
+                                        <div class="donate_amount">1 oy</div>
+                                        <div class="donate_price">25 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="telegram">
+                                        <div class="donate_badge">Premium</div>
+                                        <div class="donate_amount">3 oy</div>
+                                        <div class="donate_price">65 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="telegram">
+                                        <div class="donate_badge">Premium</div>
+                                        <div class="donate_amount">6 oy</div>
+                                        <div class="donate_price">220 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                    <div class="donate_card" data-game="telegram">
+                                        <div class="donate_badge">Premium</div>
+                                        <div class="donate_amount">12 oy</div>
+                                        <div class="donate_price">380 000 so'm</div>
+                                        <button class="btn_buy">Sotib olish</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section> -->
+
+
+            <section id="why_choose_us">
+                <div class="container">
+                    <div class="why_choose_us-top">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+
+                    <div class="why_choose_us-end">
+                        <div class="box">
+                            <img src="./images/wallet.svg" alt="wallet">
+                            <div class="text">
+                                <h4>Tez donatlar</h4>
+                                <p>Bizning xizmatimiz shunchalik tezki kartadan pul o'tkazishingiz bilan hisobingizni
+                                    to'ldiramiz</p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="./images/game_consol.png" alt="game_consol">
+                            <div class="text">
+                                <h4>Turli ommabop o'yinlar</h4>
+                                <p>Eng mashhur o'yinlar va trenddagi servislar</p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="./images/zashita.png" alt="zashita">
+                            <div class="text">
+                                <h4>Yuqori xavfsizlik</h4>
+                                <p>Tez va ishonchli xizmatlar kafolati</p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="./images/wallet.svg" alt="wallet">
+                            <div class="text">
+                                <h4>Ishonchli hamkorlik</h4>
+                                <p>Uzoq yillik hamkorlik va qulay servis kafolati</p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="./images/wallet.svg" alt="wallet">
+                            <div class="text">
+                                <h4>24/7 hamkorlik</h4>
+                                <p>Siz hohlagan vaqt hohlagan paytingizda o'yinlar uchun donat qilishingiz mumkin</p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="./images/wallet.svg" alt="wallet">
+                            <div class="text">
+                                <h4>Ishonchli hamkorlik</h4>
+                                <p>Uzoq yillik hamkorlik va qulay servis kafolati</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+
+                </div>
+            </section>
+
+        </main>
+        <!-- /Main -->
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+
+            </div>
+        </footer>
+        <!-- /Footer -->
+
+    </div>
+    <!-- /Wrapper -->
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

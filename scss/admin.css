@@ -1,0 +1,308 @@
+.admin_wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #050505;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+.admin_sidebar {
+  width: 260px;
+  background-color: #0c0c0e;
+  border-right: 1px solid #222224;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.admin_sidebar .admin_logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.admin_sidebar .admin_logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+.admin_sidebar .admin_logo h1 span {
+  color: #ff5722;
+}
+.admin_sidebar .admin_logo .badge_admin {
+  background-color: rgba(255, 87, 34, 0.15);
+  color: #ff5722;
+  padding: 3px 8px;
+  font-size: 11px;
+  border-radius: 4px;
+  font-weight: bold;
+  border: 1px solid rgba(255, 87, 34, 0.3);
+}
+.admin_sidebar .sidebar_menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.admin_sidebar .sidebar_menu ul li {
+  padding: 14px 16px;
+  color: #a0a0a0;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s;
+}
+.admin_sidebar .sidebar_menu ul li:hover, .admin_sidebar .sidebar_menu ul li.active {
+  background-color: #121212;
+  color: #ffffff;
+  border-left: 4px solid #ff5722;
+}
+.admin_sidebar .sidebar_menu ul li .order_count_badge {
+  background-color: #ff5722;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: auto;
+}
+.admin_sidebar .sidebar_menu ul .logout_li a {
+  color: #ff4d4d;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin_content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+.admin_content h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.admin_section.hidden,
+form.hidden,
+#productModal.hidden {
+  display: none !important;
+}
+
+.stats_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.stats_grid .stat_card {
+  background-color: #121212;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #222224;
+}
+.stats_grid .stat_card h3 {
+  font-size: 14px;
+  color: #a0a0a0;
+  margin-bottom: 10px;
+}
+.stats_grid .stat_card .stat_value {
+  font-size: 24px;
+  font-weight: 700;
+}
+.stats_grid .stat_card .stat_value.text_neon {
+  color: #ff5722;
+  text-shadow: 0 0 10px rgba(255, 87, 34, 0.2);
+}
+
+.table_responsive {
+  width: 100%;
+  overflow-x: auto;
+  background-color: #121212;
+  border-radius: 12px;
+  border: 1px solid #222224;
+}
+
+.admin_table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+.admin_table th,
+.admin_table td {
+  padding: 16px;
+  border-bottom: 1px solid #222224;
+  vertical-align: middle;
+}
+.admin_table th {
+  background-color: rgba(255, 255, 255, 0.02);
+  color: #a0a0a0;
+  font-weight: 600;
+}
+.admin_table tr:hover {
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.status_badge {
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.status_badge.pending {
+  background: rgba(255, 165, 0, 0.15);
+  color: orange;
+}
+.status_badge.completed {
+  background: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+}
+
+.btn_action {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 5px;
+  transition: background 0.2s;
+}
+.btn_action.done {
+  background-color: #4caf50;
+  color: white;
+}
+.btn_action.done:hover {
+  background-color: #439a46;
+}
+.btn_action.cancel {
+  background-color: #f44336;
+  color: white;
+}
+.btn_action.cancel:hover {
+  background-color: #e53935;
+}
+
+.section_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.section_header h2 {
+  margin: 0;
+}
+
+.btn_add_product {
+  background: linear-gradient(90deg, orange, #ff5722);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.btn_add_product:hover {
+  transform: scale(1.03);
+}
+
+/* Modal Oyna Olovrang Geymer Stil */
+#productModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+#productModal .modal_content {
+  background: #141416;
+  border: 1px solid #ff5722;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(255, 87, 34, 0.25);
+  width: 100%;
+  max-width: 450px;
+  box-sizing: border-box;
+}
+#productModal .modal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#productModal .modal_header h3 {
+  color: #fff;
+  margin: 0;
+  font-size: 20px;
+}
+#productModal .modal_header #closeModalBtn {
+  cursor: pointer;
+  color: #a0a0a0;
+  font-size: 26px;
+}
+#productModal .modal_header #closeModalBtn:hover {
+  color: #ff4d4d;
+}
+#productModal #addProductForm,
+#productModal #addGameForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#productModal #addProductForm .form_group,
+#productModal #addGameForm .form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+#productModal #addProductForm .form_group label,
+#productModal #addGameForm .form_group label {
+  color: #a0a0a0;
+  font-size: 13px;
+  text-align: left;
+}
+#productModal #addProductForm .form_group input,
+#productModal #addProductForm .form_group select,
+#productModal #addGameForm .form_group input,
+#productModal #addGameForm .form_group select {
+  width: 100%;
+  padding: 12px;
+  background: #1e1e22;
+  border: 1px solid #2d2d34;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+#productModal #addProductForm .form_group input:focus,
+#productModal #addProductForm .form_group select:focus,
+#productModal #addGameForm .form_group input:focus,
+#productModal #addGameForm .form_group select:focus {
+  border-color: #ff5722;
+  box-shadow: 0 0 8px rgba(255, 87, 34, 0.5);
+}
+#productModal #addProductForm .btn_submit_modal,
+#productModal #addGameForm .btn_submit_modal {
+  background: linear-gradient(90deg, orange, #ff5722);
+  color: #000;
+  border: none;
+  padding: 13px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+#productModal #addProductForm .btn_submit_modal:hover,
+#productModal #addGameForm .btn_submit_modal:hover {
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.4);
+}/*# sourceMappingURL=admin.css.map */
