@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamePay - Admin Panel</title>
+    <link rel="stylesheet" href="./scss/admin.css">
+</head>
+
+<body>
+
+    <div class="admin_wrapper">
+        <aside class="admin_sidebar">
+            <div class="admin_logo">
+                <h1>Game<span>Pay</span></h1>
+                <span class="badge_admin">Admin</span>
+            </div>
+            <nav class="sidebar_menu">
+                <ul>
+                    <li class="active" data-target="dashboard">
+                        <span class="icon">📊</span> Dashboard
+                    </li>
+                    <li data-target="orders">
+                        <span class="icon">📦</span> Buyurtmalar <span class="order_count_badge">3</span>
+                    </li>
+                    <li data-target="products">
+                        <span class="icon">🎮</span> Mahsulotlar
+                    </li>
+                    <li class="logout_li">
+                        <a href="index.html"><span class="icon">🚪</span> Saytga qaytish</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="admin_content">
+
+            <section id="dashboard" class="admin_section">
+                <h2>Boshqaruv Paneli (Statistika)</h2>
+                <div class="stats_grid">
+                    <div class="stat_card">
+                        <h3>Jami Daromad</h3>
+                        <p class="stat_value text_neon">4,250,000 so'm</p>
+                    </div>
+                    <div class="stat_card">
+                        <h3>Yangi Buyurtmalar</h3>
+                        <p class="stat_value">3 ta</p>
+                    </div>
+                    <div class="stat_card">
+                        <h3>Faol Foydalanuvchilar</h3>
+                        <p class="stat_value">1,420 ta</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="orders" class="admin_section hidden">
+                <h2>Kelib tushgan buyurtmalar</h2>
+                <div class="table_responsive">
+                    <table class="admin_table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Foydalanuvchi</th>
+                                <th>O'yin / Paket</th>
+                                <th>O'yin ID (UID)</th>
+                                <th>Narxi</th>
+                                <th>Holat (Status)</th>
+                                <th>Amallar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ordersTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="products" class="admin_section hidden">
+                <div class="section_header">
+                    <h2>Mahsulotlarni boshqarish</h2>
+                    <button class="btn_add_product" id="openModalBtn">+ Yangi paket qo'shish</button>
+                </div>
+
+                <div class="table_responsive">
+                    <table class="admin_table">
+                        <thead>
+                            <tr>
+                                <th>Rasm</th>
+                                <th>O'yin nomi</th>
+                                <th>Donat miqdori</th>
+                                <th>Narxi</th>
+                                <th>O'chirish</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <div id="productModal" class="hidden">
+        <div class="modal_content">
+            <div class="modal_header">
+                <h3 id="modalTitle">Yangi Donat Paketi Qo'shish</h3>
+                <span id="closeModalBtn">&times;</span>
+            </div>
+
+            <form id="addProductForm">
+                <div class="form_group">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <label for="prodGame">O'yin turi:</label>
+                        <span id="switchToGameForm"
+                            style="color: #ff5722; font-size: 12px; cursor: pointer; text-decoration: underline;">+
+                            Yangi O'yin Qo'shish</span>
+                    </div>
+                    <select id="prodGame" required>
+                    </select>
+                </div>
+
+                <div class="form_group">
+                    <label for="prodAmount">Donat Miqdori:</label>
+                    <input type="text" id="prodAmount" placeholder="Masalan: 60 UC yoki 520 Diamonds" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="prodPrice">Narxi (so'mda):</label>
+                    <input type="number" id="prodPrice" placeholder="Masalan: 12000" required>
+                </div>
+
+                <button type="submit" class="btn_submit_modal">Saytga qo'shish</button>
+            </form>
+
+            <form id="addGameForm" class="hidden">
+                <div class="form_group">
+                    <label for="newGameName">O'yin Nomi:</label>
+                    <input type="text" id="newGameName" placeholder="Masalan: Clash Royale" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="newGameImage">O'yin Rasmi (URL yoki Fayl yo'li):</label>
+                    <input type="text" id="newGameImage"
+                        placeholder="Masalan: ./images/clash.png yoki internetdan havola" required>
+                </div>
+
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                    <button type="button" id="backToProductForm" class="btn_submit_modal"
+                        style="background: #333; color: #fff;">Orqaga</button>
+                    <button type="submit" class="btn_submit_modal">O'yinni qo'shish</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/admin.js"></script>
+</body>
+
+</html>

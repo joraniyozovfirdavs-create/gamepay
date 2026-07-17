@@ -1,0 +1,242 @@
+$bg-dark: #0a0a0c;
+$card-bg: #141418;
+$orange-neon: #ff5722;
+$text-white: #ffffff;
+$text-muted: #a0a0a0;
+$border-color: #222226;
+
+// Navbar-dagi savat tugmasi
+.cart_nav_btn {
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 8px;
+    background: $card-bg;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+
+    &:hover {
+        border-color: $orange-neon;
+        box-shadow: 0 0 10px rgba($orange-neon, 0.3);
+    }
+
+    .cart_count {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: $orange-neon;
+        color: white;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 2px 6px;
+        border-radius: 50%;
+    }
+}
+
+// Savat Modali Modullari
+.cart_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+    display: flex;
+    justify-content: flex-end; // O'ng tomonga taqash
+    transition: opacity 0.3s ease;
+
+    &.hidden {
+        display: none !important;
+    }
+
+    .cart_content {
+        width: 100%;
+        max-width: 400px;
+        height: 100%;
+        background: $bg-dark;
+        border-left: 1px solid $border-color;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        animation: slideIn 0.3s ease-out;
+    }
+}
+
+.cart_header {
+    padding: 20px;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+        font-size: 20px;
+        margin: 0;
+        color: $text-white;
+
+        span {
+            color: $orange-neon;
+        }
+    }
+
+    .close_cart {
+        font-size: 30px;
+        color: $text-muted;
+        cursor: pointer;
+        transition: color 0.2s;
+
+        &:hover {
+            color: #ff4d4d;
+        }
+    }
+}
+
+.cart_body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .empty_cart_message {
+        text-align: center;
+        color: $text-muted;
+        margin-top: 50px;
+        font-size: 16px;
+    }
+
+    // Savat ichidagi har bir element kartasi
+    .cart_item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: $card-bg;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid $border-color;
+
+        img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+
+        .item_details {
+            flex: 1;
+
+            h4 {
+                margin: 0 0 4px 0;
+                font-size: 14px;
+                color: $text-white;
+            }
+
+            p {
+                margin: 0;
+                font-size: 13px;
+                color: $orange-neon;
+                font-weight: bold;
+            }
+        }
+
+        .item_price {
+            font-size: 14px;
+            font-weight: bold;
+            color: $text-white;
+        }
+
+        .btn_remove_item {
+            background: transparent;
+            border: none;
+            color: $text-muted;
+            cursor: pointer;
+            font-size: 18px;
+
+            &:hover {
+                color: #ff4d4d;
+            }
+        }
+    }
+}
+
+.cart_footer {
+    padding: 20px;
+    border-top: 1px solid $border-color;
+    background: rgba(255, 255, 255, 0.01);
+
+    .total_price_block {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        .text_neon {
+            color: $orange-neon;
+            text-shadow: 0 0 10px rgba($orange-neon, 0.3);
+        }
+    }
+
+    #checkoutForm {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .form_group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            label {
+                color: $text-muted;
+                font-size: 12px;
+            }
+
+            input {
+                padding: 12px;
+                background: #141416;
+                border: 1px solid $border-color;
+                border-radius: 6px;
+                color: #fff;
+                outline: none;
+
+                &:focus {
+                    border-color: $orange-neon;
+                }
+            }
+        }
+
+        .btn_checkout {
+            background: linear-gradient(90deg, orange, $orange-neon);
+            border: none;
+            padding: 14px;
+            color: #000;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 0 15px rgba($orange-neon, 0.4);
+            }
+        }
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

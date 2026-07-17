@@ -1,0 +1,292 @@
+body {
+  background-color: black;
+}
+
+.login_page_wrapper {
+  background-color: #050505;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login_container {
+  background-color: #121212;
+  max-width: 420px;
+  width: 100%;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 87, 34, 0.15);
+  border: 1px solid rgba(255, 87, 34, 0.2);
+  text-align: center;
+}
+.login_container .login_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.login_container .login_logo img {
+  height: 42px;
+  width: auto;
+}
+.login_container .login_logo h1 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.login_container .login_logo h1 span {
+  color: orange;
+}
+.login_container .login_subtitle {
+  color: #a0a0a0;
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+
+.login_form {
+  text-align: left;
+}
+.login_form .error_message {
+  background-color: rgba(255, 51, 51, 0.1);
+  border: 1px solid #ff3333;
+  color: #ff3333;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.login_form .error_message.hidden {
+  display: none;
+}
+.login_form .input_group {
+  margin-bottom: 22px;
+}
+.login_form .input_group label {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.login_form .input_group .label_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login_form .input_group .label_row .forgot_link {
+  color: orange;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.login_form .input_group .label_row .forgot_link:hover {
+  color: #ff5722;
+  text-decoration: underline;
+}
+.login_form .input_group input[type=email],
+.login_form .input_group input[type=password] {
+  width: 100%;
+  padding: 13px 16px;
+  background-color: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+.login_form .input_group input[type=email]:focus,
+.login_form .input_group input[type=password]:focus {
+  outline: none;
+  border-color: #ff5722;
+  box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
+}
+.login_form .input_group input[type=email]::-moz-placeholder, .login_form .input_group input[type=password]::-moz-placeholder {
+  color: #555555;
+}
+.login_form .input_group input[type=email]::placeholder,
+.login_form .input_group input[type=password]::placeholder {
+  color: #555555;
+}
+.login_form .form_actions {
+  margin-bottom: 25px;
+}
+.login_form .form_actions .remember_me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a0a0a0;
+  font-size: 13px;
+  cursor: pointer;
+}
+.login_form .form_actions .remember_me input {
+  accent-color: #ff5722;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.login_form .form_actions .remember_me:hover span {
+  color: #ffffff;
+}
+.login_form .btn_login_submit {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, orange, #ff5722);
+  border: none;
+  border-radius: 10px;
+  color: #050505;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.2s;
+  box-shadow: 0 4px 20px rgba(255, 87, 34, 0.4);
+}
+.login_form .btn_login_submit:hover {
+  opacity: 0.95;
+}
+.login_form .btn_login_submit:active {
+  transform: scale(0.98);
+}
+
+.divider {
+  position: relative;
+  margin: 25px 0;
+}
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #2a2a2a;
+}
+.divider span {
+  position: relative;
+  background-color: #121212;
+  padding: 0 15px;
+  color: #a0a0a0;
+  font-size: 13px;
+}
+
+.btn_google {
+  width: 100%;
+  padding: 12px;
+  background-color: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.btn_google:hover {
+  background-color: #252525;
+  border-color: rgba(255, 165, 0, 0.3);
+}
+
+.signup_redirect {
+  margin-top: 30px;
+  color: #a0a0a0;
+  font-size: 14px;
+}
+.signup_redirect a {
+  color: #ff5722;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.signup_redirect a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+.input_group {
+  margin-bottom: 22px;
+}
+.input_group label {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.input_group .label_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input_group .label_row .forgot_link {
+  color: orange;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.input_group .label_row .forgot_link:hover {
+  color: #ff5722;
+  text-decoration: underline;
+}
+.input_group .password_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input_group .password_wrapper input[type=password],
+.input_group .password_wrapper input[type=text] {
+  width: 100%;
+  padding: 13px 45px 13px 16px;
+  background-color: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+.input_group .password_wrapper input[type=password]:focus,
+.input_group .password_wrapper input[type=text]:focus {
+  outline: none;
+  border-color: #ff5722;
+  box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
+}
+.input_group .password_wrapper input[type=password]::-moz-placeholder, .input_group .password_wrapper input[type=text]::-moz-placeholder {
+  color: #555555;
+}
+.input_group .password_wrapper input[type=password]::placeholder,
+.input_group .password_wrapper input[type=text]::placeholder {
+  color: #555555;
+}
+.input_group .password_wrapper .toggle_password {
+  position: absolute;
+  right: 15px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #555555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+.input_group .password_wrapper .toggle_password:hover {
+  color: #ff5722;
+}
+.input_group .password_wrapper .toggle_password svg {
+  display: block;
+}
+.input_group .password_wrapper.show_active .toggle_password {
+  color: #ff5722;
+}/*# sourceMappingURL=login.css.map */

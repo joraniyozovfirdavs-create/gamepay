@@ -1,0 +1,354 @@
+// Admin o'zgaruvchilari
+$bg-black: #050505;
+$sidebar-bg: #0c0c0e;
+$card-bg: #121212;
+$orange-main: orange;
+$orange-neon: #ff5722;
+$text-white: #ffffff;
+$text-muted: #a0a0a0;
+$border-color: #222224;
+
+.admin_wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: $bg-black;
+    color: $text-white;
+    font-family: sans-serif;
+}
+
+// Sidebar dizayni
+.admin_sidebar {
+    width: 260px;
+    background-color: $sidebar-bg;
+    border-right: 1px solid $border-color;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+
+    .admin_logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 40px;
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+
+            span {
+                color: $orange-neon;
+            }
+        }
+
+        .badge_admin {
+            background-color: rgba($orange-neon, 0.15);
+            color: $orange-neon;
+            padding: 3px 8px;
+            font-size: 11px;
+            border-radius: 4px;
+            font-weight: bold;
+            border: 1px solid rgba($orange-neon, 0.3);
+        }
+    }
+
+    .sidebar_menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 14px 16px;
+            color: $text-muted;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.2s;
+
+            &:hover,
+            &.active {
+                background-color: $card-bg;
+                color: $text-white;
+                border-left: 4px solid $orange-neon;
+            }
+
+            .order_count_badge {
+                background-color: $orange-neon;
+                color: white;
+                font-size: 11px;
+                padding: 2px 6px;
+                border-radius: 50%;
+                margin-left: auto;
+            }
+        }
+
+        .logout_li a {
+            color: #ff4d4d;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+    }
+}
+
+// Asosiy Kontent qismi
+.admin_content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+}
+
+// Yashirin elementlar uchun qat'iy qoida
+.admin_section.hidden,
+form.hidden,
+#productModal.hidden {
+    display: none !important;
+}
+
+// Dashboard kartalari
+.stats_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+
+    .stat_card {
+        background-color: $card-bg;
+        padding: 25px;
+        border-radius: 12px;
+        border: 1px solid $border-color;
+
+        h3 {
+            font-size: 14px;
+            color: $text-muted;
+            margin-bottom: 10px;
+        }
+
+        .stat_value {
+            font-size: 24px;
+            font-weight: 700;
+
+            &.text_neon {
+                color: $orange-neon;
+                text-shadow: 0 0 10px rgba($orange-neon, 0.2);
+            }
+        }
+    }
+}
+
+// Jadvallar dizayni (Table)
+.table_responsive {
+    width: 100%;
+    overflow-x: auto;
+    background-color: $card-bg;
+    border-radius: 12px;
+    border: 1px solid $border-color;
+}
+
+.admin_table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+
+    th,
+    td {
+        padding: 16px;
+        border-bottom: 1px solid $border-color;
+        vertical-align: middle;
+    }
+
+    th {
+        background-color: rgba(255, 255, 255, 0.02);
+        color: $text-muted;
+        font-weight: 600;
+    }
+
+    tr:hover {
+        background-color: rgba(255, 255, 255, 0.01);
+    }
+}
+
+// Status badgelari
+.status_badge {
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+
+    &.pending {
+        background: rgba(255, 165, 0, 0.15);
+        color: orange;
+    }
+
+    &.completed {
+        background: rgba(76, 175, 80, 0.15);
+        color: #4caf50;
+    }
+}
+
+// Tugmalar
+.btn_action {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: background 0.2s;
+
+    &.done {
+        background-color: #4caf50;
+        color: white;
+
+        &:hover {
+            background-color: #439a46;
+        }
+    }
+
+    &.cancel {
+        background-color: #f44336;
+        color: white;
+
+        &:hover {
+            background-color: #e53935;
+        }
+    }
+}
+
+.section_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+
+    h2 {
+        margin: 0;
+    }
+}
+
+.btn_add_product {
+    background: linear-gradient(90deg, $orange-main, $orange-neon);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+/* Modal Oyna Olovrang Geymer Stil */
+#productModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    .modal_content {
+        background: #141416;
+        border: 1px solid $orange-neon;
+        border-radius: 14px;
+        padding: 30px;
+        box-shadow: 0 0 25px rgba($orange-neon, 0.25);
+        width: 100%;
+        max-width: 450px;
+        box-sizing: border-box;
+    }
+
+    .modal_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        h3 {
+            color: #fff;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        #closeModalBtn {
+            cursor: pointer;
+            color: $text-muted;
+            font-size: 26px;
+
+            &:hover {
+                color: #ff4d4d;
+            }
+        }
+    }
+
+    #addProductForm,
+    #addGameForm {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .form_group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            label {
+                color: $text-muted;
+                font-size: 13px;
+                text-align: left;
+            }
+
+            input,
+            select {
+                width: 100%;
+                padding: 12px;
+                background: #1e1e22;
+                border: 1px solid #2d2d34;
+                border-radius: 8px;
+                color: #fff;
+                font-size: 14px;
+                outline: none;
+                transition: all 0.3s ease;
+                box-sizing: border-box;
+
+                &:focus {
+                    border-color: $orange-neon;
+                    box-shadow: 0 0 8px rgba($orange-neon, 0.5);
+                }
+            }
+        }
+
+        .btn_submit_modal {
+            background: linear-gradient(90deg, $orange-main, $orange-neon);
+            color: #000;
+            border: none;
+            padding: 13px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            &:hover {
+                box-shadow: 0 0 15px rgba($orange-neon, 0.4);
+            }
+        }
+    }
+}
